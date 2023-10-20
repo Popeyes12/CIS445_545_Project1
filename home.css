@@ -18,13 +18,13 @@ code {
     float: right;
     width: 45%;
     height: 183px;
-    border:#333 1px solid;
+    border: #9955BB 3px solid;
   }
 
   article{
     width:45%;
-    height:420px;
-    border:#333 1px solid;
+    height:421px;
+    border:#9955BB 3px solid;
   }
   footer {
     clear: both;
@@ -32,7 +32,6 @@ code {
   }
   /* Style the footer */
   footer {
-      background-color: #333;
       color: #fff;
       text-align: center;
       padding: 10px;
@@ -64,6 +63,7 @@ code {
       *{
           color: black;
           font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+          word-wrap: break-word;
       }
       .text{
           font-family: 'Courier New', Courier, monospace;
