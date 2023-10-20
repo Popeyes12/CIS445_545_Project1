@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* styles.css */
+.color-transition {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(90deg, #9c27b0, #673ab7);
+    background-size: 200% 100%;
+    animation: breathe 5s ease-in-out infinite;
+}
+
+@keyframes breathe {
+    0% {
+        background-position: 100% 0;
+    }
+    50% {
+        background-position: 0% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+    *{
+        color: black;
+        font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+    }
+    .text{
+        font-family: 'Courier New', Courier, monospace;
+        white-space: nowrap;
+    }
+    </style>
+</head>
+<body class="color-transition">
+    <h1 >My Profile</h1>
+<br>
+<h2 class="text">Name: Markel Venson</h2>
+<h2 class="text">Age: 21</h2>
+<h2 class="text">Major: Computer Information Systems</h2>
+<h2 class="text">Minor: Creative Writing </h2>
+<br><br>
+<marquee behavior="alternate" direction="right" style="width:650%">I am 6 feet tall</marquee>
+
+</body>
+</html>
