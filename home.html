@@ -67,6 +67,8 @@
       <h2>Communications</h2>
       <h3 class="text">Email: mvenson@mail.bradley.edu</h2>
       <h3 class="text">If you want to reach me click the button below</h3>
+
+<!--
     <div class="overlay" id="popup">
       <div class="popup-form">
           <span class="close-button" id="closePopup">&times;</span>
@@ -84,24 +86,50 @@
           </form>
       </div>
   </div>
+
+
   <button id="openPopup" style="background-color: blueviolet; float:left;">Open Email Form</button>
+-->
+<button id="openPopup">Open Email Form</button>
+
+<div class="overlay" id="popup">
+    <div class="popup-form">
+        <span class="close-button" id="closePopup">&times;</span>
+        <h2>Email Form</h2>
+        <form id="emailForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <br><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <br><br>
+            <input type="button" id="sendEmail" value="Send">
+        </form>
+    </div>
+</div>
+
 </code>
     </section>
 </main>
 
-
-
   <footer>
-    <code style="font-family: 'Franklin Gothic Medium'; float:left; text-wrap: wrap;">&copy; Markel Venson Inc.</code>
+    <code style="font-family: 'Franklin Gothic Medium'; text-align:left; text-wrap: wrap;">&copy; Markel Venson Inc.</code>
   </footer>
   <br>
   <script>
-  const openButton = document.getElementById("openPopup");
+              const openButton = document.getElementById("openPopup");
         const closeButton = document.getElementById("closePopup");
+        const sendEmailButton = document.getElementById("sendEmail");
         const popup = document.getElementById("popup");
         const emailForm = document.getElementById("emailForm");
 
         openButton.addEventListener("click", function() {
+            const subject = "My Subject"; // Pre-fill the subject
+            document.getElementById("subject").value = subject;
             popup.style.display = "block";
         });
 
@@ -111,15 +139,27 @@
 
         emailForm.addEventListener("submit", function(event) {
             event.preventDefault();
+            // Handle email form submission here (if needed)
+        });
+
+        sendEmailButton.addEventListener("click", function() {
+            const subject = document.getElementById("subject").value;
             const email = document.getElementById("email").value;
             const message = document.getElementById("message").value;
+            const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+            
+            // Open the email client in the same window
+            window.location.href = mailtoLink;
+        });
 
-            // Here, you can process the email and message as needed, e.g., send them to a server.
-
-            // Clear the form and close the popup
-            document.getElementById("email").value = "";
-            document.getElementById("message").value = "";
-            popup.style.display = "none";
+        openEmailClientButton.addEventListener("click", function() {
+            const subject = document.getElementById("subject").value;
+            const body = document.getElementById("message").value;
+            const recipient = "recipient@example.com";
+            const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Open the email client in the same window
+            window.location.href = mailtoLink;
         });
 
         window.addEventListener("click", function(event) {
