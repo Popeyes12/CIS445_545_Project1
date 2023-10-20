@@ -24,7 +24,11 @@
       <h3 class="text">Age: 21</h3>
       <h3 class="text">Major: Computer Information Systems</h3>
       <h3 class="text">Minor: Creative Writing </h3>
+      <h3 class="text">Hometown: Chicago, IL</h3>
       <h3 class="text">Class of 2024 </h3>
+      <h3 class="text">Favorite Color: Purple</h3>
+      
+      <br>
       <marquee behavior="alternate" direction="right" style="text-wrap:wrap">I am 6 feet tall</marquee>
 
       </code>
@@ -54,18 +58,75 @@
 <section style="width:45%;">
   <code>
     <h2>Qualifications</h2>
-    <h3 class="text">Name: Markel Venson</h2>
-      <h3 class="text">Age: 21</h2>
-      <h3 class="text">Major: Computer Information Systems</h2></code>
+    <h3 class="text">Worked IT for OSF for a year</h2>
+      <h3 class="text">Designed websites for small businesses since high school</h3>
+      <h3 class="text">Proficient in Microsoft 365 tools</h3></code>
   </section>
   <section style="float:left; width:45%;">
     <code>
       <h2>Communications</h2>
-      &#60;section&#62; <br> float: left;</code>
+      <h3 class="text">Email: mvenson@mail.bradley.edu</h2>
+      <h3 class="text">If you want to reach me click the button below</h3>
+    <div class="overlay" id="popup">
+      <div class="popup-form">
+          <span class="close-button" id="closePopup">&times;</span>
+          <h2>Email Form</h2>
+          <form id="emailForm">
+              <label for="email">Email: &nbsp;&nbsp;&nbsp;
+
+              </label>
+              <input type="email" id="email" name="email" required>
+              <br><br>
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="3" required></textarea>
+              <br><br>
+              <input type="submit" value="Send">
+          </form>
+      </div>
+  </div>
+  <button id="openPopup" style="background-color: blueviolet; float:left;">Open Email Form</button>
+</code>
     </section>
 </main>
+
+
+
   <footer>
-    <code>&#60;footer&#62;</code>
+    <code style="font-family: 'Franklin Gothic Medium'; float:left; text-wrap: wrap;">&copy; Markel Venson Inc.</code>
   </footer>
+  <br>
+  <script>
+  const openButton = document.getElementById("openPopup");
+        const closeButton = document.getElementById("closePopup");
+        const popup = document.getElementById("popup");
+        const emailForm = document.getElementById("emailForm");
+
+        openButton.addEventListener("click", function() {
+            popup.style.display = "block";
+        });
+
+        closeButton.addEventListener("click", function() {
+            popup.style.display = "none";
+        });
+
+        emailForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Here, you can process the email and message as needed, e.g., send them to a server.
+
+            // Clear the form and close the popup
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+            popup.style.display = "none";
+        });
+
+        window.addEventListener("click", function(event) {
+            if (event.target === popup) {
+                popup.style.display = "none";
+            }
+        });
+        </script>
 </body>
 </html>
