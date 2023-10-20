@@ -3,24 +3,27 @@ code {
     color: #fff;
     display: block;
     font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
-    padding: 24px 15px;
+    padding: 15px 15px;
     text-align: center;
   }
   header,
   section,
+  article,
   aside,
   footer {
     margin: 0 1.5% 24px 1.5%;
+    padding: 0% .5% 2% .5%;
   }
   section {
     float: right;
-    width: 40%;
-    height: 110px;
+    width: 45%;
+    height: 130px;
     border:#333 1px solid;
   }
-  aside{
-    width:40%;
-    height:250px;
+
+  article{
+    width:45%;
+    height:310px;
     border:#333 1px solid;
   }
   footer {
