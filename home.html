@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="home.css">
     <style>
 code {
-  background: #2db34a;
   border-radius: 6px;
   color: #fff;
   display: block;
@@ -22,8 +21,13 @@ footer {
   margin: 0 1.5% 24px 1.5%;
 }
 section {
-  float: left;
-  width: 30%;
+  width: 40%;
+  border:#333 1px solid;
+}
+aside{
+  width:40%;
+  height:220px;
+  border:#333 1px solid;
 }
 footer {
   clear: both;
@@ -36,9 +40,9 @@ footer {
     text-align: center;
     padding: 10px;
 }
-
+/**/
 .color-transition {
-    width: 200px;
+    width: 100%;
     height: 200px;
     background: linear-gradient(90deg, #9c27b0, #673ab7);
     background-size: 200% 100%;
@@ -56,6 +60,7 @@ footer {
         background-position: 100% 0;
     }
 }
+
     *{
         color: black;
         font-family: 'Tahoma', Geneva, Verdana, sans-serif;
@@ -64,6 +69,7 @@ footer {
         font-family: 'Courier New', Courier, monospace;
         white-space: nowrap;
     }
+    
     </style>
 </head>
 <body class="color-transition">
@@ -75,20 +81,22 @@ footer {
 <h2 class="text">Minor: Creative Writing </h2>
 <br><br>
 <marquee behavior="alternate" direction="right" style="width:650%">I am 6 feet tall</marquee>
+<br><br><br>
+<main>
+  <aside style="float:right;">
+    <code>&#60;section&#62; <br> float: left;</code>
+  </aside>
 <section>
     <code>&#60;section&#62; <br> float: left;</code>
   </section>
-  
   <section>
     <code>&#60;section&#62; <br> float: left;</code>
   </section>
   
-  <section>
-    <code>&#60;section&#62; <br> float: left;</code>
-  </section>
-  
+</main>
   <footer>
     <code>&#60;footer&#62;</code>
   </footer>
+  <p style="float:right">hello</p>
 </body>
 </html>
