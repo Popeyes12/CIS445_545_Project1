@@ -52,8 +52,6 @@
   <br><br>
 
 </main>
-
-
 <main style="margin-top:35%;">
 <section style="width:45%;">
   <code>
@@ -90,24 +88,24 @@
 
   <button id="openPopup" style="background-color: blueviolet; float:left;">Open Email Form</button>
 -->
-<button id="openPopup">Open Email Form</button>
+<button id="openPopup" style="background-color: blueviolet; float:left;">Open Email Form</button>
 
 <div class="overlay" id="popup">
     <div class="popup-form">
         <span class="close-button" id="closePopup">&times;</span>
         <h2>Email Form</h2>
-        <form id="emailForm">
-            <label for="email">Email:</label>
+        <form id="emailForm" style="text-align: left;">
+            <label for="email" style="text-align: left;">Email:</label>
             <input type="email" id="email" name="email" required>
             <br><br>
-            <label for="subject">Subject:</label>
+            <label for="subject" style="text-align: left;">Subject:</label>
             <input type="text" id="subject" name="subject" required>
             
             <br><br>
-            <label for="message">Message:</label>
+            <label for="message" style="text-align: left;">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
             <br><br>
-            <input type="button" id="sendEmail" value="Send">
+            <input type="button" id="sendEmail" value="Send" style="background-color: blueviolet; float:left;">
         </form>
     </div>
 </div>
@@ -118,10 +116,11 @@
 
   <footer>
     <code style="font-family: 'Franklin Gothic Medium'; text-align:left; text-wrap: wrap;">&copy; Markel Venson Inc.</code>
-  </footer>
+  </footer> 
+
   <br>
   <script>
-              const openButton = document.getElementById("openPopup");
+        const openButton = document.getElementById("openPopup");
         const closeButton = document.getElementById("closePopup");
         const sendEmailButton = document.getElementById("sendEmail");
         const popup = document.getElementById("popup");
